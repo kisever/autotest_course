@@ -16,7 +16,6 @@
 
 import unittest  # Не удалять
 
-sum_tuple
 def treatment_sum(our_tuple: tuple):
     """
     Сумма двух элементов.
