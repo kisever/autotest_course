@@ -4,13 +4,15 @@
 
 
 
-with open('test_file/task1_data.txt') as f:
-    data = f.read().split()
+with open("test_file/task1_data.txt", encoding='utf-8') as text_origin:
+    text_finish = '\n'.join([
+        ''.join([char for char in line if not char.isnumeric()]).strip()
+        for line in text_origin
+    ])
 
-result = ' '.join([word for word in data if not any(char.isdigit() for char in word)])
+with open("test_file/task1_answer.txt", 'w' , encoding='utf-8') as ethalon_file:
+    ethalon_file.write(text_finish)
 
-with open('test_file/task1_answer.txt', 'w') as f:
-    f.write(result)
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 

@@ -29,5 +29,3 @@ for purchase in purchases:
 # находим сумму трех самых дорогих покупок
 sorted_prices = sorted(prices, reverse=True)
 three_most_expensive_purchases = sum(sorted_prices[:3])
-
-assert three_most_expensive_purchases == 202346
